@@ -1,6 +1,6 @@
-package repository;
+package com.brokemenot.blog.repository;
 
-import models.Post;
+import com.brokemenot.blog.models.Post;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +11,6 @@ import java.util.Optional;
 public interface PostRepository extends MongoRepository<Post, String> {
 
     Optional<Post> findPostById(String id);
-    void updatePostById(String id);
     Optional<Post> findPostByTitle(String title);
     List<Post> findAllPostsByAuthorId(String authorId);
 }

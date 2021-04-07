@@ -1,4 +1,4 @@
-package models;
+package com.brokemenot.blog.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

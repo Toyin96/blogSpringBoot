@@ -1,9 +1,9 @@
-package DTOs;
+package com.brokemenot.blog.DTOs;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import models.Post;
+import com.brokemenot.blog.models.Post;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
@@ -14,7 +14,6 @@ import java.time.LocalDate;
 public class PostDto {
 
     private String id;
-    @NotNull
     private LocalDate pubDate;
     private String body;
     private String title;
@@ -25,7 +24,7 @@ public class PostDto {
         postdto.setId(post.getAuthorId());
         postdto.setAuthorId(post.getAuthorId());
         postdto.setBody(post.getBody());
-        postdto.setTitle(post.getTitle());
+        postdto.setTitle(post.getTitle().toLowerCase());
         postdto.setPubDate(post.getPubDate());
 
         return postdto;
